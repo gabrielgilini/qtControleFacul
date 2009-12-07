@@ -15,36 +15,112 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTabWidget" name="tabWidget">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>60</y>
-      <width>401</width>
-      <height>271</height>
+      <x>10</x>
+      <y>10</y>
+      <width>581</width>
+      <height>341</height>
      </rect>
     </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
+    </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="tabsClosable">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>false</bool>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
       <string>Curso</string>
      </attribute>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <layout class="QFormLayout" name="formLayout">
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>341</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Selecionar</string>
+      </property>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>281</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout_4">
         <item row="0" column="0">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Curso:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cursoList"/>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="selecionarCurso">
+          <property name="text">
+           <string>Selecionar</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>341</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Adicionar novo</string>
+      </property>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>281</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="1" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
            <string>Nome:</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="1">
+        <item row="1" column="1">
          <widget class="QLineEdit" name="nomeCurso"/>
         </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="salvarCursoButton">
+        <item row="2" column="1">
+         <widget class="QPushButton" name="salvarCurso">
           <property name="text">
            <string>Salvar</string>
           </property>
@@ -54,14 +130,14 @@
          </widget>
         </item>
        </layout>
-      </item>
-     </layout>
+      </widget>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
       <string>Disciplina</string>
      </attribute>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>11</x>
@@ -71,6 +147,9 @@
        </rect>
       </property>
       <layout class="QFormLayout" name="formLayout_3">
+       <property name="fieldGrowthPolicy">
+        <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+       </property>
        <item row="0" column="0">
         <widget class="QLabel" name="label_2">
          <property name="text">
@@ -101,23 +180,57 @@
        <item row="2" column="1">
         <widget class="QLineEdit" name="serieDisciplina"/>
        </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Curso:</string>
-         </property>
-        </widget>
-       </item>
        <item row="3" column="1">
-        <widget class="QComboBox" name="cursoDisciplina"/>
-       </item>
-       <item row="4" column="1">
         <widget class="QPushButton" name="salvarDisciplina">
          <property name="text">
           <string>Salvar</string>
          </property>
          <property name="shortcut">
           <string>Return, Enter</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Turma</string>
+     </attribute>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>431</width>
+        <height>291</height>
+       </rect>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="idTurma"/>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="disciplinaTurma"/>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="salvarTurma">
+         <property name="text">
+          <string>Salvar</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Disciplina:</string>
          </property>
         </widget>
        </item>

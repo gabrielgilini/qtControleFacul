@@ -3,6 +3,8 @@
 #include <QString>
 #include "curso.h"
 
+class Curso;
+
 class Disciplina
 {
 private:

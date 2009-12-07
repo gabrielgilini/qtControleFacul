@@ -6,13 +6,13 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     curso.cpp \
-    disciplina.cpp
+    disciplina.cpp \
+    turma.cpp
 HEADERS += mainwindow.h \
-    disciplina.hpp \
     aluno.hpp \
-    turma.hpp \
     professor.hpp \
     pessoa.hpp \
     curso.h \
-    disciplina.h
+    disciplina.h \
+    turma.h
 FORMS += mainwindow.ui

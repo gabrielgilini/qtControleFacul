@@ -17,3 +17,13 @@ const Curso Disciplina::getCurso()
     const Curso c(*this->curso);
     return c;
 }
+
+QString Disciplina::getNome()
+{
+    return this->nome;
+}
+
+void Disciplina::setNome(QString nome)
+{
+    this->nome = nome;
+}
