@@ -64,7 +64,7 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
     <value type="QString" >ANT_HOME=/usr/share/ant</value>
     <value type="QString" >CPLUS_INCLUDE_PATH=/usr/lib/qt/include:/opt/kde3/lib/qt3/include</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-krGnsrTFmt,guid=e183e96a1776bc8978f78acf4b1548d3</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-U5znuvUbKw,guid=26ff912ddfde4cfd5e47665d4b1c53ba</value>
     <value type="QString" >DESKTOP_SESSION=kde</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -100,7 +100,7 @@
     <value type="QString" >QT4DIR=/usr/lib/qt</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/gabriel/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3394,unix/deep-thought:/tmp/.ICE-unix/3394</value>
+    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3563,unix/deep-thought:/tmp/.ICE-unix/3563</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >T1LIB_CONFIG=/usr/share/t1lib/t1lib.config</value>
@@ -132,7 +132,7 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
     <value type="QString" >ANT_HOME=/usr/share/ant</value>
     <value type="QString" >CPLUS_INCLUDE_PATH=/usr/lib/qt/include:/opt/kde3/lib/qt3/include</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-krGnsrTFmt,guid=e183e96a1776bc8978f78acf4b1548d3</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-U5znuvUbKw,guid=26ff912ddfde4cfd5e47665d4b1c53ba</value>
     <value type="QString" >DESKTOP_SESSION=kde</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -168,7 +168,7 @@
     <value type="QString" >QT4DIR=/usr/lib/qt</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/gabriel/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3394,unix/deep-thought:/tmp/.ICE-unix/3394</value>
+    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3563,unix/deep-thought:/tmp/.ICE-unix/3563</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >T1LIB_CONFIG=/usr/share/t1lib/t1lib.config</value>

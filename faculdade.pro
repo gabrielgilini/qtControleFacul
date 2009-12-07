@@ -7,12 +7,16 @@ SOURCES += main.cpp \
     mainwindow.cpp \
     curso.cpp \
     disciplina.cpp \
-    turma.cpp
+    turma.cpp \
+    aluno.cpp \
+    pessoa.cpp
 HEADERS += mainwindow.h \
     aluno.hpp \
     professor.hpp \
     pessoa.hpp \
     curso.h \
     disciplina.h \
-    turma.h
+    turma.h \
+    aluno.h \
+    pessoa.h
 FORMS += mainwindow.ui

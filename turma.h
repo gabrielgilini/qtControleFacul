@@ -9,13 +9,13 @@ class Turma
 private:
     Disciplina* disciplina;
     unsigned int id;
-    QList<Aluno*> alunos;
+    QMap<QString, Aluno*> alunos;
 public:
-    Turma();
-    void addAluno(Aluno* a);
-    QList<Aluno*> getAlunos();
-    void setId(unsigned int id);
+    Turma(unsigned int id, Disciplina* d);
+    void addAluno(Aluno* a, QString nome);
+    QMap<QString, Aluno*> getAlunos();
     unsigned int getId();
+    QString getIdString();
 };
 
 #endif // TURMA_H

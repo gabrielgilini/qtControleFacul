@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
@@ -58,7 +57,7 @@ MainWindow::on_salvarCurso_clicked()
 void
 MainWindow::on_selecionarCurso_clicked()
 {
-    if(currentCurso = getSelected())
+    if((currentCurso = getSelectedCurso()))
     {
         ui->tabWidget->setTabEnabled(1, true);
         statusBar()->addPermanentWidget(new QLabel(QString("Editando curso \"").append(currentCurso->getNome()).append("\"."), this));
@@ -71,9 +70,9 @@ MainWindow::on_salvarDisciplina_clicked()
     if(idDisciplina->text() != "" && nomeDisciplina->text() != "" && serieDisciplina->text() != "")
     {
         ui->tabWidget->setTabEnabled(2, true);
-        Disciplina d(idDisciplina->text(), currentCurso, nomeDisciplina->text());
+        Disciplina d(idDisciplina->text(), currentCurso, nomeDisciplina->text(), serieDisciplina->text().toUShort());
         currentCurso->addDisciplina(&d, d.getNome());
-        QMessageBox::information(this, "Nova Disciplina", QString("Disciplina \"").append(nomeDisciplina->text()).append("\" adicionada\nao curso \"").append(currentCurso->getNome()).append("\"com sucesso."));
+        QMessageBox::information(this, "Nova Disciplina", QString("Disciplina \"").append(nomeDisciplina->text()).append("\" adicionada\nao curso \"").append(currentCurso->getNome()).append("\" com sucesso."));
         idDisciplina->clear();
         nomeDisciplina->clear();
         serieDisciplina->clear();
@@ -81,11 +80,42 @@ MainWindow::on_salvarDisciplina_clicked()
     }
 }
 
+void
+MainWindow::on_salvarTurma_clicked()
+{
+    Disciplina* d;
+    unsigned int id = ui->idTurma->text().toUInt();
+
+    if(ui->idTurma->text() != "" && ui->disciplinaTurma->count() > 0 && (d = getSelectedDisciplina()))
+    {
+        Turma t(id, d);
+        //d->addTurma(new Turma(id, d), id);
+        QMessageBox::information(this, "Nova Turma", QString("Turma \"").append(ui->idTurma->text()).append("\" adicionada\nà disiciplina \"").append(d->getNome()).append("\" com sucesso."));
+        //ui->idTurma->clear();
+        //updateGrid(t);
+    }
+}
+
 Curso*
-MainWindow::getSelected()
+MainWindow::getSelectedCurso()
 {
     if(cursoList->count() > 0)
         return cursos[cursoList->itemText(cursoList->currentIndex())];
+    else
+        return NULL;
+}
+
+Disciplina*
+MainWindow::getSelectedDisciplina()
+{
+    if(ui->disciplinaTurma->count() > 0 && currentCurso)
+    {
+        QMap<QString, Disciplina*> qm(currentCurso->getDisciplinas());
+        QString key = ui->disciplinaTurma->itemText(ui->disciplinaTurma->currentIndex());
+        Disciplina* d = qm[key];
+        QMessageBox::information(this, d->getId(), d->getNome());
+        return d;
+    }
     else
         return NULL;
 }
@@ -100,4 +130,11 @@ void
 MainWindow::updateSelect(Disciplina* d)
 {
     disciplinaTurma->addItem(d->getNome());
+}
+
+void
+MainWindow::updateGrid(Turma* t)
+{
+    QCheckBox* qc = new QCheckBox(t->getIdString(), this);
+    ui->turmasGrid->addWidget(qc);
 }

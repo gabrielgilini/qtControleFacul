@@ -4,10 +4,13 @@
 #include <QtGui/QMainWindow>
 #include <QtGui/QLineEdit>
 #include <QtGui/QComboBox>
+#include <QtGui/QCheckBox>
+#include <QMessageBox>
 #include <QList>
 #include <QMap>
 #include "curso.h"
 #include "disciplina.h"
+#include "turma.h"
 
 namespace Ui
 {
@@ -22,6 +25,7 @@ private slots:
     void on_salvarCurso_clicked();
     void on_salvarDisciplina_clicked();
     void on_selecionarCurso_clicked();
+    void on_salvarTurma_clicked();
 
 public:
     MainWindow(QWidget *parent = 0);
@@ -40,7 +44,9 @@ private:
 
     void updateSelect(Curso* c);
     void updateSelect(Disciplina* d);
-    Curso* getSelected();
+    void updateGrid(Turma* t);
+    Curso* getSelectedCurso();
+    Disciplina* getSelectedDisciplina();
 };
 
 #endif // MAINWINDOW_H

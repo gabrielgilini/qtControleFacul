@@ -1,11 +1,17 @@
 #include "turma.h"
 
-void Turma::addAluno(Aluno* a)
+Turma::Turma(unsigned int id, Disciplina* d)
 {
-    this->alunos.append(a);
+    this->disciplina = d;
+    this->id = id;
 }
 
-QList<Aluno*> Turma::getAlunos()
+void Turma::addAluno(Aluno* a, QString nome)
+{
+    this->alunos[nome] = a;
+}
+
+QMap<QString, Aluno*> Turma::getAlunos()
 {
     return this->alunos;
 }
@@ -15,7 +21,7 @@ unsigned int Turma::getId()
     return this->id;
 }
 
-void Turma::setId(unsigned int id)
+QString Turma::getIdString()
 {
-    this->id = id;
+    return QString(this->id);
 }
