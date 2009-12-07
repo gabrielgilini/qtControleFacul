@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>qtControleFacul</string>
   </property>
   <property name="locale">
    <locale language="Portuguese" country="Brazil"/>
@@ -21,9 +21,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>20</y>
       <width>601</width>
-      <height>711</height>
+      <height>701</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -34,7 +34,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>601</width>
+       <width>651</width>
        <height>647</height>
       </rect>
      </property>
@@ -272,7 +272,7 @@
        <x>0</x>
        <y>0</y>
        <width>601</width>
-       <height>647</height>
+       <height>637</height>
       </rect>
      </property>
      <attribute name="label">
@@ -364,12 +364,18 @@
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>151</width>
+          <width>181</width>
           <height>18</height>
          </rect>
         </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
-         <string>Número de Matrícula:</string>
+         <string>Número de Matrícula*:</string>
         </property>
        </widget>
        <widget class="QLineEdit" name="matriculaAluno">
@@ -455,14 +461,20 @@
         <x>150</x>
         <y>30</y>
         <width>381</width>
-        <height>271</height>
+        <height>274</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
         <widget class="QLabel" name="label_10">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Nome:</string>
+          <string>Nome*:</string>
          </property>
         </widget>
        </item>
@@ -481,8 +493,14 @@
        </item>
        <item row="2" column="0">
         <widget class="QLabel" name="label_14">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>CPF:</string>
+          <string>CPF*:</string>
          </property>
         </widget>
        </item>
@@ -502,14 +520,20 @@
        <item row="4" column="0">
         <widget class="QLabel" name="label_15">
          <property name="text">
-          <string>Data de Nascimento:</string>
+          <string>Data de Nascimento*:</string>
          </property>
         </widget>
        </item>
        <item row="4" column="1">
         <widget class="QLabel" name="label_16">
+         <property name="font">
+          <font>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
          <property name="text">
-          <string>Ano de Admissão:</string>
+          <string>Ano de Admissão*:</string>
          </property>
         </widget>
        </item>

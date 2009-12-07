@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Dec 7 15:12:00 2009
+** Created: Mon Dec 7 19:31:02 2009
 **      by: Qt User Interface Compiler version 4.5.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -46,6 +46,8 @@ public:
     QAction *actionSair;
     QAction *actionSelecionarCurso;
     QWidget *centralWidget;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContents_2;
     QToolBox *toolBox;
     QWidget *page;
     QTabWidget *tabWidget;
@@ -129,12 +131,26 @@ public:
         actionSelecionarCurso->setObjectName(QString::fromUtf8("actionSelecionarCurso"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        toolBox = new QToolBox(centralWidget);
+        scrollArea_2 = new QScrollArea(centralWidget);
+        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
+        scrollArea_2->setGeometry(QRect(0, 0, 621, 531));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(scrollArea_2->sizePolicy().hasHeightForWidth());
+        scrollArea_2->setSizePolicy(sizePolicy);
+        scrollArea_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        scrollArea_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 601, 511));
+        toolBox = new QToolBox(scrollAreaWidgetContents_2);
         toolBox->setObjectName(QString::fromUtf8("toolBox"));
-        toolBox->setGeometry(QRect(10, 10, 601, 711));
+        toolBox->setGeometry(QRect(0, 0, 651, 711));
         page = new QWidget();
         page->setObjectName(QString::fromUtf8("page"));
-        page->setGeometry(QRect(0, 0, 601, 647));
+        page->setGeometry(QRect(0, 0, 651, 647));
         tabWidget = new QTabWidget(page);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setEnabled(true);
@@ -284,7 +300,7 @@ public:
         toolBox->addItem(page, QString::fromUtf8("Curso"));
         page_2 = new QWidget();
         page_2->setObjectName(QString::fromUtf8("page_2"));
-        page_2->setGeometry(QRect(0, 0, 601, 647));
+        page_2->setGeometry(QRect(0, 0, 651, 647));
         label_5 = new QLabel(page_2);
         label_5->setObjectName(QString::fromUtf8("label_5"));
         label_5->setGeometry(QRect(10, 20, 61, 18));
@@ -311,7 +327,11 @@ public:
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
         label_17 = new QLabel(tab_4);
         label_17->setObjectName(QString::fromUtf8("label_17"));
-        label_17->setGeometry(QRect(10, 10, 151, 18));
+        label_17->setGeometry(QRect(10, 10, 181, 18));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        label_17->setFont(font);
         matriculaAluno = new QLineEdit(tab_4);
         matriculaAluno->setObjectName(QString::fromUtf8("matriculaAluno"));
         matriculaAluno->setGeometry(QRect(10, 30, 281, 24));
@@ -343,7 +363,7 @@ public:
         alunoProfessor->addTab(tab_5, QString());
         widget = new QWidget(page_2);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(150, 30, 381, 271));
+        widget->setGeometry(QRect(150, 30, 381, 274));
         gridLayout = new QGridLayout(widget);
         gridLayout->setSpacing(6);
         gridLayout->setMargin(11);
@@ -351,6 +371,7 @@ public:
         gridLayout->setContentsMargins(0, 0, 0, 0);
         label_10 = new QLabel(widget);
         label_10->setObjectName(QString::fromUtf8("label_10"));
+        label_10->setFont(font);
 
         gridLayout->addWidget(label_10, 0, 0, 1, 1);
 
@@ -371,6 +392,7 @@ public:
 
         label_14 = new QLabel(widget);
         label_14->setObjectName(QString::fromUtf8("label_14"));
+        label_14->setFont(font);
 
         gridLayout->addWidget(label_14, 2, 0, 1, 1);
 
@@ -396,6 +418,7 @@ public:
 
         label_16 = new QLabel(widget);
         label_16->setObjectName(QString::fromUtf8("label_16"));
+        label_16->setFont(font);
 
         gridLayout->addWidget(label_16, 4, 1, 1, 1);
 
@@ -427,6 +450,7 @@ public:
         gridLayout->addWidget(enderecoPessoa, 7, 0, 1, 2);
 
         toolBox->addItem(page_2, QString::fromUtf8("Pessoas"));
+        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -454,7 +478,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "qtControleFacul", 0, QApplication::UnicodeUTF8));
         actionSair->setText(QApplication::translate("MainWindow", "Sai&r", 0, QApplication::UnicodeUTF8));
         actionSelecionarCurso->setText(QApplication::translate("MainWindow", "Selecionar", 0, QApplication::UnicodeUTF8));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Selecionar", 0, QApplication::UnicodeUTF8));
@@ -478,17 +502,17 @@ public:
         toolBox->setItemText(toolBox->indexOf(page), QApplication::translate("MainWindow", "Curso", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("MainWindow", "Alunos", 0, QApplication::UnicodeUTF8));
         label_9->setText(QApplication::translate("MainWindow", "Professores", 0, QApplication::UnicodeUTF8));
-        label_17->setText(QApplication::translate("MainWindow", "N\303\272mero de Matr\303\255cula:", 0, QApplication::UnicodeUTF8));
+        label_17->setText(QApplication::translate("MainWindow", "N\303\272mero de Matr\303\255cula*:", 0, QApplication::UnicodeUTF8));
         label_18->setText(QApplication::translate("MainWindow", "Turmas:", 0, QApplication::UnicodeUTF8));
         salvarAluno->setText(QApplication::translate("MainWindow", "Salvar", 0, QApplication::UnicodeUTF8));
         alunoProfessor->setTabText(alunoProfessor->indexOf(tab_4), QApplication::translate("MainWindow", "Aluno", 0, QApplication::UnicodeUTF8));
         alunoProfessor->setTabText(alunoProfessor->indexOf(tab_5), QApplication::translate("MainWindow", "Professor", 0, QApplication::UnicodeUTF8));
-        label_10->setText(QApplication::translate("MainWindow", "Nome:", 0, QApplication::UnicodeUTF8));
+        label_10->setText(QApplication::translate("MainWindow", "Nome*:", 0, QApplication::UnicodeUTF8));
         label_12->setText(QApplication::translate("MainWindow", "Email:", 0, QApplication::UnicodeUTF8));
-        label_14->setText(QApplication::translate("MainWindow", "CPF:", 0, QApplication::UnicodeUTF8));
+        label_14->setText(QApplication::translate("MainWindow", "CPF*:", 0, QApplication::UnicodeUTF8));
         label_13->setText(QApplication::translate("MainWindow", "Telefone:", 0, QApplication::UnicodeUTF8));
-        label_15->setText(QApplication::translate("MainWindow", "Data de Nascimento:", 0, QApplication::UnicodeUTF8));
-        label_16->setText(QApplication::translate("MainWindow", "Ano de Admiss\303\243o:", 0, QApplication::UnicodeUTF8));
+        label_15->setText(QApplication::translate("MainWindow", "Data de Nascimento*:", 0, QApplication::UnicodeUTF8));
+        label_16->setText(QApplication::translate("MainWindow", "Ano de Admiss\303\243o*:", 0, QApplication::UnicodeUTF8));
         nascimentoPessoa->setDisplayFormat(QApplication::translate("MainWindow", "d/M/yy", 0, QApplication::UnicodeUTF8));
         label_11->setText(QApplication::translate("MainWindow", "Endere\303\247o:", 0, QApplication::UnicodeUTF8));
         toolBox->setItemText(toolBox->indexOf(page_2), QApplication::translate("MainWindow", "Pessoas", 0, QApplication::UnicodeUTF8));

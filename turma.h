@@ -1,8 +1,11 @@
 #ifndef TURMA_H
 #define TURMA_H
 #include "disciplina.h"
+#include <sstream>
 
 class Aluno;
+
+class Disciplina;
 
 class Turma
 {

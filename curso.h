@@ -3,8 +3,11 @@
 #include <QString>
 #include <QList>
 #include <QMap>
+#include "disciplina.h"
 
 class Disciplina;
+
+class Turma;
 
 class Curso
 {
@@ -14,6 +17,7 @@ public:
     void setNome(QString nome);
     void addDisciplina(Disciplina* d, QString nome);
     QMap<QString, Disciplina*> getDisciplinas();
+    Turma* getTurmaById(unsigned int id);
 
 private:
     QString nome;

@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     disciplina.cpp \
     turma.cpp \
     aluno.cpp \
-    pessoa.cpp
+    pessoa.cpp \
+    qturmabuttongroup.cpp
 HEADERS += mainwindow.h \
     aluno.hpp \
     professor.hpp \
@@ -18,5 +19,6 @@ HEADERS += mainwindow.h \
     disciplina.h \
     turma.h \
     aluno.h \
-    pessoa.h
+    pessoa.h \
+    qturmabuttongroup.h
 FORMS += mainwindow.ui

@@ -23,5 +23,7 @@ unsigned int Turma::getId()
 
 QString Turma::getIdString()
 {
-    return QString(this->id);
+    std::stringstream ss;
+    ss << this->id;
+    return QString(ss.str().c_str());
 }

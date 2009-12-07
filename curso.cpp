@@ -24,3 +24,16 @@ QMap<QString, Disciplina*> Curso::getDisciplinas()
 {
     return this->disciplinas;
 }
+
+Turma* Curso::getTurmaById(unsigned int id)
+{
+    Turma* t;
+    foreach(Disciplina* d, this->disciplinas)
+    {
+        if((t = d->getTurmaById(id)))
+        {
+            return t;
+        }
+    }
+    return NULL;
+}
