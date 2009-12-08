@@ -10,12 +10,16 @@ class Boletim;
 class Aluno : public Pessoa
 {
 private:
-    unsigned long int numMatricula;
+    QString numMatricula;
     QMap<unsigned int, Turma*> turmas;
     QMap<unsigned int, Boletim*> boletins;
 public:
-    Aluno(unsigned long int n, QString nome, QString cpf, QString dn, unsigned int aa);
+    Aluno();
+    Aluno(QString n, QString nome, QString cpf, QString dn, unsigned int aa);
     void addTurma(unsigned int id, Turma* t);
+    void clearTurmas();
+    QString getNumMatricula();
+    bool isInTurma(unsigned int id);
     //void setNota();
 };
 

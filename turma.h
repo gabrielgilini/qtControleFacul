@@ -1,7 +1,6 @@
 #ifndef TURMA_H
 #define TURMA_H
 #include "disciplina.h"
-#include <sstream>
 
 class Aluno;
 
@@ -19,6 +18,7 @@ public:
     QMap<QString, Aluno*> getAlunos();
     unsigned int getId();
     QString getIdString();
+    QString getDisciplinaNome();
 };
 
 #endif // TURMA_H

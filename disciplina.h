@@ -19,7 +19,7 @@
         QMap<unsigned int, Turma*> turmas;
     public:
         Disciplina(QString id, Curso* curso, QString nome, unsigned short int serie);
-
+        Disciplina();
         QString getId();
         const Curso getCurso();
         QString getNome();

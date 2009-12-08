@@ -1,5 +1,9 @@
 #include "curso.h"
 
+Curso::Curso()
+{
+}
+
 Curso::Curso(QString nome)
 {
     this->nome = nome;

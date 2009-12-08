@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Mon Dec 7 19:20:13 2009
+** Created: Tue Dec 8 15:51:08 2009
 **      by: The Qt Meta Object Compiler version 61 (Qt 4.5.1)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        2,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   12, // methods
+       8,   12, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -34,6 +34,9 @@ static const uint qt_meta_data_MainWindow[] = {
       67,   11,   11,   11, 0x08,
       96,   11,   11,   11, 0x08,
      121,   11,   11,   11, 0x08,
+     146,   11,   11,   11, 0x08,
+     174,   11,   11,   11, 0x08,
+     201,   11,   11,   11, 0x08,
 
        0        // eod
 };
@@ -44,6 +47,9 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "on_selecionarCurso_clicked()\0"
     "on_salvarTurma_clicked()\0"
     "on_salvarAluno_clicked()\0"
+    "on_alunosList_itemClicked()\0"
+    "on_cancelarAluno_clicked()\0"
+    "on_removerAluno_clicked()\0"
 };
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -76,9 +82,12 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: on_selecionarCurso_clicked(); break;
         case 3: on_salvarTurma_clicked(); break;
         case 4: on_salvarAluno_clicked(); break;
+        case 5: on_alunosList_itemClicked(); break;
+        case 6: on_cancelarAluno_clicked(); break;
+        case 7: on_removerAluno_clicked(); break;
         default: ;
         }
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }

@@ -12,6 +12,7 @@ class Turma;
 class Curso
 {
 public:
+    Curso();
     Curso(QString nome);
     QString getNome();
     void setNome(QString nome);
@@ -23,5 +24,4 @@ private:
     QString nome;
     QMap<QString, Disciplina*> disciplinas;
 };
-
 #endif // CURSO_H
