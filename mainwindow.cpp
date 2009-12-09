@@ -63,8 +63,8 @@ MainWindow::saveData()
         QMap<QString, Curso*>::const_iterator i = cursos.constBegin();
         while(i != cursos.constEnd())
         {
-            Curso cTmp(*i.value());
-            tmp.setValue(cTmp);
+            tmp = QVariant::fromValue(*i.value());
+            qDebug() << tmp;
             cur.insert(i.key(), tmp);
             ++i;
         }
@@ -128,18 +128,68 @@ MainWindow::on_selecionarCurso_clicked()
 }
 
 void
+MainWindow::on_removerCurso_clicked()
+{
+    Curso* tmp;
+    if((tmp = getSelectedCurso()) && QMessageBox::question(ui->selectDisciplina, "Deletar curso", QString("Tem certeza que deseja deletar \"" + tmp->getNome() + "\"?"), QMessageBox::Yes | QMessageBox::No))
+    {
+        cursos.remove(tmp->getNome());
+        ui->cursoList->removeItem(ui->cursoList->currentIndex());
+        delete tmp;
+    }
+}
+
+void
 MainWindow::on_salvarDisciplina_clicked()
 {
     if(ui->idDisciplina->text() != "" && ui->nomeDisciplina ->text() != "" && ui->serieDisciplina->text() != "")
     {
+        Disciplina* d;
         ui->tabWidget->setTabEnabled(2, true);
-        Disciplina* d = new Disciplina(ui->idDisciplina->text(), currentCurso, ui->nomeDisciplina ->text(), ui->serieDisciplina->text().toUShort());
-        currentCurso->addDisciplina(d, d->getNome());
+        if(currentCurso->disciplinaExists(ui->nomeDisciplina->text()))
+        {
+            d = currentCurso->getDisciplinaByNome(ui->nomeDisciplina->text());
+        }
+        else
+        {
+            d = new Disciplina(ui->idDisciplina->text(), currentCurso, ui->nomeDisciplina ->text(), ui->serieDisciplina->text().toUShort());
+            currentCurso->addDisciplina(d, d->getNome());
+        }
+
         QMessageBox::information(this, "Nova Disciplina", QString("Disciplina \"").append(ui->nomeDisciplina ->text()).append("\" adicionada\nao curso \"").append(currentCurso->getNome()).append("\" com sucesso."));
-        ui->idDisciplina->clear();
-        ui->nomeDisciplina ->clear();
-        ui->serieDisciplina->clear();
+        clearDisciplina();
         updateSelect(d);
+    }
+}
+
+void
+MainWindow::on_editarDisciplina_clicked()
+{
+    QString nome;
+    if(!((nome = ui->selectDisciplina->currentText()).isEmpty()))
+    {
+        Disciplina* d = currentCurso->getDisciplinaByNome(nome);
+        editDisciplina(d);
+    }
+}
+
+void
+MainWindow::on_cancelarDisciplina_clicked()
+{
+    clearDisciplina();
+}
+
+void
+MainWindow::on_removerDisciplina_clicked()
+{
+
+    QString nome = ui->selectDisciplina->itemText(ui->selectDisciplina->currentIndex());
+    if(QMessageBox::question(ui->selectDisciplina, "Deletar disciplina", QString("Tem certeza que deseja deletar \"" + nome + "\"?"), QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
+    {
+        currentCurso->delDisciplinaByNome(nome);
+        ui->selectDisciplina->removeItem(ui->selectDisciplina->currentIndex());
+        ui->disciplinaTurma->removeItem(ui->disciplinaTurma->findText(nome));
+        clearDisciplina();
     }
 }
 
@@ -156,7 +206,7 @@ MainWindow::on_salvarTurma_clicked()
         d->addTurma(t, id);
         QMessageBox::information(this, "Nova Turma", QString("Turma \"").append(ui->idTurma->text()).append("\" adicionada\nà disiciplina \"").append(d->getNome()).append("\" com sucesso."));
         ui->idTurma->clear();
-        updateGrid(t);
+        updateGridAndSelect(t);
     }
 }
 
@@ -215,6 +265,22 @@ MainWindow::clearAluno()
     {
         turmaBoxes[i]->setChecked(false);
     }
+}
+
+void
+MainWindow::clearDisciplina()
+{
+    ui->idDisciplina->clear();
+    ui->nomeDisciplina ->clear();
+    ui->serieDisciplina->clear();
+}
+
+void
+MainWindow::editDisciplina(Disciplina* d)
+{
+    ui->nomeDisciplina->setText(d->getNome());
+    ui->idDisciplina->setText(d->getId());
+    ui->serieDisciplina->setText(QString::number(d->getSerie()));
 }
 
 void
@@ -339,15 +405,17 @@ MainWindow::updateSelect(Curso* c)
 void
 MainWindow::updateSelect(Disciplina* d)
 {
+    ui->selectDisciplina->addItem(d->getNome());
     ui->disciplinaTurma->addItem(d->getNome());
 }
 
 void
-MainWindow::updateGrid(Turma* t)
+MainWindow::updateGridAndSelect(Turma* t)
 {
     QString label(t->getIdString());
     label.append(" - ").append(t->getDisciplinaNome());
     QCheckBox* qc = new QCheckBox(label, this);
     turmaBoxes.append(qc);
     ui->turmasGrid->addWidget(qc);
+    ui->selectTurmas->addItem(label);
 }

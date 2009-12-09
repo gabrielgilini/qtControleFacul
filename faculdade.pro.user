@@ -64,7 +64,7 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
     <value type="QString" >ANT_HOME=/usr/share/ant</value>
     <value type="QString" >CPLUS_INCLUDE_PATH=/usr/lib/qt/include:/opt/kde3/lib/qt3/include</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-XEdB5GXAga,guid=c1e22b9ce34c6fb3620bc1e34b1d08e9</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-9VbZz2nUfu,guid=573f79230245a73f3c7365de4b1ec624</value>
     <value type="QString" >DESKTOP_SESSION=kde</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -96,11 +96,11 @@
     <value type="QString" >MINICOM=-c on</value>
     <value type="QString" >PATH=/usr/lib/qt/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib/java/bin:/usr/lib/kde4/libexec:/opt/kde3/lib/qt3/bin:/opt/kde3/bin:/usr/lib/qt/bin:/usr/share/texmf/bin:.</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig</value>
-    <value type="QString" >PWD=/home/gabriel</value>
+    <value type="QString" >PWD=/opt/qtsdk-2009.04/bin</value>
     <value type="QString" >QT4DIR=/usr/lib/qt</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/gabriel/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/4667,unix/deep-thought:/tmp/.ICE-unix/4667</value>
+    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3502,unix/deep-thought:/tmp/.ICE-unix/3502</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >T1LIB_CONFIG=/usr/share/t1lib/t1lib.config</value>
@@ -120,7 +120,7 @@
     <value type="QString" >CONFIG+=debug</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString" >/usr/bin/qmake</value>
-   <value key="abstractProcess.enabled" type="bool" >false</value>
+   <value key="abstractProcess.enabled" type="bool" >true</value>
    <value key="abstractProcess.workingDirectory" type="QString" >/home/gabriel/projetos/faculdade</value>
    <value key="buildConfiguration" type="int" >2</value>
   </valuemap>
@@ -132,7 +132,7 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
     <value type="QString" >ANT_HOME=/usr/share/ant</value>
     <value type="QString" >CPLUS_INCLUDE_PATH=/usr/lib/qt/include:/opt/kde3/lib/qt3/include</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-XEdB5GXAga,guid=c1e22b9ce34c6fb3620bc1e34b1d08e9</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-9VbZz2nUfu,guid=573f79230245a73f3c7365de4b1ec624</value>
     <value type="QString" >DESKTOP_SESSION=kde</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -164,11 +164,11 @@
     <value type="QString" >MINICOM=-c on</value>
     <value type="QString" >PATH=/usr/lib/qt/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib/java/bin:/usr/lib/kde4/libexec:/opt/kde3/lib/qt3/bin:/opt/kde3/bin:/usr/lib/qt/bin:/usr/share/texmf/bin:.</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig</value>
-    <value type="QString" >PWD=/home/gabriel</value>
+    <value type="QString" >PWD=/opt/qtsdk-2009.04/bin</value>
     <value type="QString" >QT4DIR=/usr/lib/qt</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/gabriel/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/4667,unix/deep-thought:/tmp/.ICE-unix/4667</value>
+    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3502,unix/deep-thought:/tmp/.ICE-unix/3502</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >T1LIB_CONFIG=/usr/share/t1lib/t1lib.config</value>
@@ -195,7 +195,7 @@
    <valuelist key="abstractProcess.Environment" type="QVariantList" >
     <value type="QString" >ANT_HOME=/usr/share/ant</value>
     <value type="QString" >CPLUS_INCLUDE_PATH=/usr/lib/qt/include:/opt/kde3/lib/qt3/include</value>
-    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-XEdB5GXAga,guid=c1e22b9ce34c6fb3620bc1e34b1d08e9</value>
+    <value type="QString" >DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-doNWHv4tTl,guid=7aadd3c06f47a087106794c04b1e3a3c</value>
     <value type="QString" >DESKTOP_SESSION=kde</value>
     <value type="QString" >DESKTOP_STARTUP_ID=</value>
     <value type="QString" >DISPLAY=:0.0</value>
@@ -227,11 +227,11 @@
     <value type="QString" >MINICOM=-c on</value>
     <value type="QString" >PATH=/usr/lib/qt/bin:/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib/java/bin:/usr/lib/kde4/libexec:/opt/kde3/lib/qt3/bin:/opt/kde3/bin:/usr/lib/qt/bin:/usr/share/texmf/bin:.</value>
     <value type="QString" >PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/lib/pkgconfig</value>
-    <value type="QString" >PWD=/home/gabriel</value>
+    <value type="QString" >PWD=/opt/qtsdk-2009.04/bin</value>
     <value type="QString" >QT4DIR=/usr/lib/qt</value>
     <value type="QString" >QTDIR=/usr</value>
     <value type="QString" >QT_PLUGIN_PATH=/home/gabriel/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/4667,unix/deep-thought:/tmp/.ICE-unix/4667</value>
+    <value type="QString" >SESSION_MANAGER=local/deep-thought:@/tmp/.ICE-unix/3434,unix/deep-thought:/tmp/.ICE-unix/3434</value>
     <value type="QString" >SHELL=/bin/bash</value>
     <value type="QString" >SHLVL=1</value>
     <value type="QString" >T1LIB_CONFIG=/usr/share/t1lib/t1lib.config</value>

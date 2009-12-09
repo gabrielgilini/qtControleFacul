@@ -19,6 +19,9 @@ public:
     void addDisciplina(Disciplina* d, QString nome);
     QMap<QString, Disciplina*> getDisciplinas();
     Turma* getTurmaById(unsigned int id);
+    void delDisciplinaByNome(QString nome);
+    Disciplina* getDisciplinaByNome(QString nome);
+    bool disciplinaExists(QString nome);
 
 private:
     QString nome;

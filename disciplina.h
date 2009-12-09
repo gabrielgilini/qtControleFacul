@@ -27,6 +27,7 @@
         void addTurma(Turma* t, unsigned int id);
         QMap<unsigned int, Turma*> getTurmas();
         Turma* getTurmaById(unsigned int id);
+        unsigned short int getSerie();
     };
 
     #endif // DISCIPLINA_H

@@ -41,3 +41,25 @@ Turma* Curso::getTurmaById(unsigned int id)
     }
     return NULL;
 }
+
+void Curso::delDisciplinaByNome(QString nome)
+{
+    if(this->disciplinas.contains(nome))
+    {
+        delete  this->disciplinas.take(nome);
+    }
+}
+
+Disciplina* Curso::getDisciplinaByNome(QString nome)
+{
+    if(this->disciplinas.contains(nome))
+    {
+        return this->disciplinas.value(nome);
+    }
+    return NULL;
+}
+
+bool Curso::disciplinaExists(QString nome)
+{
+    return this->disciplinas.contains(nome);
+}

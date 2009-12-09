@@ -47,3 +47,8 @@ Turma* Disciplina::getTurmaById(unsigned int id)
     }
     return NULL;
 }
+
+unsigned short int Disciplina::getSerie()
+{
+    return this->serie;
+}

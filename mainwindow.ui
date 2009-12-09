@@ -27,15 +27,15 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page_2">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>591</width>
-       <height>631</height>
+       <width>601</width>
+       <height>637</height>
       </rect>
      </property>
      <attribute name="label">
@@ -155,8 +155,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>405</width>
-           <height>145</height>
+           <width>407</width>
+           <height>147</height>
           </rect>
          </property>
          <widget class="QWidget" name="gridLayoutWidget">
@@ -199,7 +199,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Add.png</normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Add.png</iconset>
+          <normaloff>icons/Knob Add.png</normaloff>icons/Knob Add.png</iconset>
         </property>
        </widget>
        <widget class="QPushButton" name="cancelarAluno">
@@ -229,7 +229,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Remove Red.png</normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Remove Red.png</iconset>
+          <normaloff>icons/Knob Remove Red.png</normaloff>icons/Knob Remove Red.png</iconset>
         </property>
        </widget>
       </widget>
@@ -405,8 +405,8 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>591</width>
-       <height>631</height>
+       <width>601</width>
+       <height>637</height>
       </rect>
      </property>
      <attribute name="label">
@@ -421,7 +421,7 @@
         <x>0</x>
         <y>0</y>
         <width>581</width>
-        <height>341</height>
+        <height>471</height>
        </rect>
       </property>
       <property name="tabShape">
@@ -447,7 +447,7 @@
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>140</y>
+          <y>180</y>
           <width>341</width>
           <height>111</height>
          </rect>
@@ -459,12 +459,12 @@
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>30</y>
+           <y>20</y>
            <width>281</width>
-           <height>61</height>
+           <height>81</height>
           </rect>
          </property>
-         <layout class="QFormLayout" name="formLayout_4">
+         <layout class="QGridLayout" name="gridLayout_5">
           <item row="0" column="0">
            <widget class="QLabel" name="label_8">
             <property name="text">
@@ -472,13 +472,28 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="1" colspan="2">
            <widget class="QComboBox" name="cursoList"/>
           </item>
           <item row="1" column="1">
+           <widget class="QPushButton" name="removerCurso">
+            <property name="text">
+             <string>Remover</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Remove Red.png</normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Remove Red.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
            <widget class="QPushButton" name="selecionarCurso">
             <property name="text">
              <string>Selecionar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Valid Green.png</normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Valid Green.png</iconset>
             </property>
            </widget>
           </item>
@@ -495,32 +510,49 @@
          </rect>
         </property>
         <property name="title">
-         <string>Adicionar novo</string>
+         <string>Novo</string>
         </property>
         <widget class="QWidget" name="layoutWidget">
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>30</y>
+           <y>20</y>
            <width>281</width>
-           <height>71</height>
+           <height>91</height>
           </rect>
          </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="1" column="0">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
            <widget class="QLabel" name="label">
             <property name="text">
              <string>Nome:</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="0" column="1" colspan="2">
            <widget class="QLineEdit" name="nomeCurso"/>
           </item>
-          <item row="2" column="1">
+          <item row="1" column="1">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>98</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="2">
            <widget class="QPushButton" name="salvarCurso">
             <property name="text">
              <string>Salvar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Add.png</normaloff>../../icons/Knob_Buttons_Toolbar_icons_by_iTweek/knobs/PNG/Knob Add.png</iconset>
             </property>
             <property name="shortcut">
              <string>Return, Enter</string>
@@ -535,104 +567,261 @@
        <attribute name="title">
         <string>Disciplina</string>
        </attribute>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QGroupBox" name="groupBox_3">
         <property name="geometry">
          <rect>
-          <x>11</x>
-          <y>11</y>
-          <width>371</width>
-          <height>211</height>
+          <x>10</x>
+          <y>10</y>
+          <width>401</width>
+          <height>201</height>
          </rect>
         </property>
-        <layout class="QFormLayout" name="formLayout_3">
-         <property name="fieldGrowthPolicy">
-          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+        <property name="title">
+         <string>Novo</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>40</y>
+           <width>361</width>
+           <height>141</height>
+          </rect>
          </property>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>Nome:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="nomeDisciplina"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="text">
-            <string>ID:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="idDisciplina"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_4">
-           <property name="text">
-            <string>Série:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="serieDisciplina"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QPushButton" name="salvarDisciplina">
-           <property name="text">
-            <string>Salvar</string>
-           </property>
-           <property name="shortcut">
-            <string>Return, Enter</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Nome:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="3">
+           <widget class="QLineEdit" name="nomeDisciplina"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>ID:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="QLineEdit" name="idDisciplina"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Série:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="serieDisciplina"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="QPushButton" name="cancelarDisciplina">
+            <property name="text">
+             <string>Cancelar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QPushButton" name="salvarDisciplina">
+            <property name="text">
+             <string>Salvar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/Knob Add.png</normaloff>icons/Knob Add.png</iconset>
+            </property>
+            <property name="shortcut">
+             <string>Return, Enter</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>270</y>
+          <width>401</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Editar/Remover</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>30</y>
+           <width>261</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Disciplina:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="selectDisciplina"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="editarDisciplina">
+            <property name="text">
+             <string>Editar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="removerDisciplina">
+            <property name="text">
+             <string>Remover</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/Knob Remove Red.png</normaloff>icons/Knob Remove Red.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
         <string>Turma</string>
        </attribute>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
          <rect>
           <x>10</x>
           <y>10</y>
-          <width>431</width>
-          <height>291</height>
+          <width>361</width>
+          <height>171</height>
          </rect>
         </property>
-        <layout class="QFormLayout" name="formLayout_2">
-         <item row="0" column="0">
-          <widget class="QLabel" name="label_6">
-           <property name="text">
-            <string>ID:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="idTurma"/>
-         </item>
-         <item row="2" column="1">
-          <widget class="QComboBox" name="disciplinaTurma"/>
-         </item>
-         <item row="3" column="1">
-          <widget class="QPushButton" name="salvarTurma">
-           <property name="text">
-            <string>Salvar</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="label_7">
-           <property name="text">
-            <string>Disciplina:</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <property name="title">
+         <string>Novo</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>19</x>
+           <y>36</y>
+           <width>301</width>
+           <height>111</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>ID:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QLineEdit" name="idTurma"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Disciplina:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QComboBox" name="disciplinaTurma"/>
+          </item>
+          <item row="2" column="1">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="salvarTurma">
+            <property name="text">
+             <string>Salvar</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/Knob Add.png</normaloff>icons/Knob Add.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>230</y>
+          <width>351</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Editar/Remover</string>
+        </property>
+        <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>40</y>
+           <width>261</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_20">
+            <property name="text">
+             <string>Turmas:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QComboBox" name="selectTurmas"/>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_3">
+            <property name="text">
+             <string>Editar</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="text">
+             <string>Remover</string>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>icons/Knob Remove Red.png</normaloff>icons/Knob Remove Red.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </widget>
      </widget>

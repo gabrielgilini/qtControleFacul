@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QDebug>
 #include <QtGui/QMainWindow>
 #include <QtGui/QLineEdit>
 #include <QtGui/QComboBox>
@@ -37,6 +38,10 @@ private slots:
     void on_alunosList_itemClicked();
     void on_cancelarAluno_clicked();
     void on_removerAluno_clicked();
+    void on_removerCurso_clicked();
+    void on_cancelarDisciplina_clicked();
+    void on_removerDisciplina_clicked();
+    void on_editarDisciplina_clicked();
 
 public:
     MainWindow(QWidget *parent = 0);
@@ -63,7 +68,7 @@ private:
 
     void updateSelect(Curso* c);
     void updateSelect(Disciplina* d);
-    void updateGrid(Turma* t);
+    void updateGridAndSelect(Turma* t);
 
     Curso* getSelectedCurso();
     Disciplina* getSelectedDisciplina();
@@ -71,8 +76,11 @@ private:
 
     void editAluno(Aluno* a);
     void saveAluno(Aluno* a, bool edit=false);
-    void clearAluno();
     void removeAluno(QString nome);
+    void editDisciplina(Disciplina* d);
+
+    void clearAluno();
+    void clearDisciplina();
 
     bool validatePessoa();
     bool validateAluno();
